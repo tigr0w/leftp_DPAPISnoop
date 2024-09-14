@@ -64,12 +64,12 @@ namespace DPAPISnoop
             var cipherAlgo = "";
             switch (algCrypt)
             {
-                case 26115 when algHash == 32777 || algHash == 32772:
+               case 26115 when (algHash == 32777):
                     version = 1;
                     hmacAlgo = "sha1";
                     cipherAlgo = "des3";
                     break;
-                case 26128 when algHash == 32782:
+               case 26128 when (algHash == 32782 || algHash == 32772):
                     version = 2;
                     hmacAlgo = "sha512";
                     cipherAlgo = "aes256";
